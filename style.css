@@ -31,7 +31,7 @@ body{
     position: relative;
     width: 100%;
     height: 50px;
-    margin: 30px 0;
+    margin: 25px 0;
 }
 
 .input-box input{
@@ -57,25 +57,59 @@ body{
     transform: translate(-50%);
 }
 
-.remember-forgot{
-    display: flex;
-    justify-content: space-between;
+.checkbox-wrapper input[type="checkbox"] {
+    visibility: hidden;
+    display: none;
+}
+
+  .checkbox-wrapper *,
+    .checkbox-wrapper ::after,
+    .checkbox-wrapper ::before {
+    box-sizing: border-box;
+    user-select: none;
+}
+
+.checkbox-wrapper {
+    position: relative;
     font-size: 14.5px;
-    margin: -15px 0 15px;
+    display: block;
+    overflow: hidden;
 }
 
-.remember-forgot label input{
-    accent-color: white;
-    margin-right: 3px;
+.checkbox-wrapper .label {
+    cursor: pointer;
 }
 
-.remember-forgot a{
+.checkbox-wrapper .check {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    opacity: 0;
+}
+
+.checkbox-wrapper a{
+    margin-left: 55px;
     color: white;
     text-decoration: none;
 }
 
-.remember-forgot a:hover{
+.checkbox-wrapper a:hover{
     text-decoration: underline;
+}
+.checkbox-wrapper .label svg {
+    vertical-align: middle;
+}
+
+.checkbox-wrapper .path1 {
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+    transition: .5s stroke-dashoffset;
+    opacity: 0;
+}
+
+.checkbox-wrapper .check:checked + label svg g path {
+    stroke-dashoffset: 0;
+    opacity: 1;
 }
 
 .btn{
