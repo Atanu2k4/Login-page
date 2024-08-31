@@ -9,7 +9,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url(nature.jpg) no-repeat;
+    background: url(car.jpg) no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -19,7 +19,7 @@ body{
     border-radius: 12px;
     padding: 30px 40px;
     border: 2px solid rgba(255, 255, 255,.2);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(3px);
 }
 
 .wrapper h1{
